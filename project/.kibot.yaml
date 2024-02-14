@@ -30,19 +30,55 @@ outputs:
   - name: pcb_print
     type: pcb_print
     options:
-      output: 'pcb.pdf'
+      output: 'floorplan.pdf'
       force_edge_cuts: true
       keep_temporal_files: false
       plot_sheet_reference: false
-      color_theme: '_builtin_default'
+      color_theme: '_builtin_classic'
+      plot_sheet_reference: true
       pages:
-        - sheet: 'Drawings'
+        - sheet: ''
+          title: 'Furniture placement'
           scaling: 1
           layers: 
-          - layer: F.Mask
-            color: '#111111'
+          - layer: F.Cu
+            color: '#888888'
+          - layer: freeway.Cu
+            color: '#CCCCCC'
           - layer: F.SilkS
-            color: '#FFFFFF'
+            color: '#444444'
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.Drawings
+            color: '#444444'
+        - sheet: ''
+          title: 'Walls'
+          scaling: 1
+          layers: 
+          - layer: walls.Cu
+            color: '#888888'
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.Drawings
+            color: '#444444'
+        - sheet: ''
+          title: 'Electrical'
+          scaling: 1
+          layers: 
+          - layer: B.Cu
+            color: '#888888'
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.Drawings
+            color: '#444444'
+        - sheet: ''
+          title: 'Pneumatic'
+          scaling: 1
+          layers: 
+          - layer: air.Cu
+            color: '#888888'
+          - layer: B.SilkS
+            color: '#000000'
           - layer: User.Drawings
             color: '#444444'
 
