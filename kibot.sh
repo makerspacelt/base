@@ -58,7 +58,7 @@ sed -i \
 
 # remove garbage changes from schematics.pdf
 sed -i '/[/]CreationDate.*$/d' ./gen/schematics.pdf
-sed -i '/[/]CreationDate.*$/d' ./gen/pcb.pdf
+sed -i '/[/]CreationDate.*$/d' ./gen/floorplan.pdf
 
 
 # move files around

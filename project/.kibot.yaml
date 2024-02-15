@@ -41,10 +41,12 @@ outputs:
           title: 'Furniture placement'
           scaling: 1
           layers: 
+          - layer: freeway.Cu
+            color: '#DDDDDD'
+          - layer: walls.Cu
+            color: '#222222'
           - layer: F.Cu
             color: '#888888'
-          - layer: freeway.Cu
-            color: '#CCCCCC'
           - layer: F.SilkS
             color: '#444444'
           - layer: B.SilkS
@@ -67,6 +69,8 @@ outputs:
           layers: 
           - layer: B.Cu
             color: '#888888'
+          - layer: B.Paste
+            color: '#444444'
           - layer: B.SilkS
             color: '#000000'
           - layer: User.Drawings
