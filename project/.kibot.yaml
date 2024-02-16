@@ -13,29 +13,22 @@ preflight:
   check_zone_fills: false
   ignore_unconnected: true
 
-filters:
-  - name: lcsc_parts
-    type: generic
-    include_only:
-      - column: 'lcsc#'
-        regex: '^C\d+'
 
 outputs:
   - name: print_sch
     type: pdf_sch_print
     options:
-      output: 'schematics.pdf'
+      output: '%p_items.pdf'
 
 
   - name: pcb_print
     type: pcb_print
     options:
-      output: 'floorplan.pdf'
+      output: '%p_floorplan.pdf'
       force_edge_cuts: true
       keep_temporal_files: false
-      plot_sheet_reference: false
-      color_theme: '_builtin_classic'
       plot_sheet_reference: true
+      color_theme: '_builtin_classic'
       pages:
         - sheet: ''
           title: 'Furniture placement'
@@ -90,14 +83,14 @@ outputs:
   - name: pcb_img_2d_front
     type: pcbdraw
     options:
-      output: 'img_pcb_2d_front_bare.jpg'
+      output: '%p_img_pcb_2d_front_bare.jpg'
       format: jpg
       dpi: 600
 
   - name: pcb_img_2d_back
     type: pcbdraw
     options:
-      output: 'img_pcb_2d_back_bare.jpg'
+      output: '%p_img_pcb_2d_back_bare.jpg'
       format: jpg
       dpi: 600
       bottom: true
@@ -106,7 +99,7 @@ outputs:
   - name: pcb_img_3d_front
     type: render_3d
     options:
-      output: 'img_pcb_3d_front.png'
+      output: '%p_img_pcb_3d_front.png'
       orthographic: true
       download: true
       solder_mask: '#104020'
@@ -120,7 +113,7 @@ outputs:
   - name: pcb_img_3d_main
     type: render_3d
     options:
-      output: 'img_pcb_3d_main.png'
+      output: '%p_img_pcb_3d_main.png'
       download: true
       rotate_x: 5
       rotate_z: -3
@@ -195,26 +188,4 @@ outputs:
     options:
       format: ipc
       output: 'netlist.ipc'
-
-  - name: fab_position
-    type: position
-    run_by_default: false
-    options:
-      format: CSV
-      output: '_pos.csv'
-      separate_files_for_front_and_back: false
-      right_digits: 3
-      pre_transform: _rot_footprint
-      columns:
-        - id: Ref
-          name: 'Designator'
-        - id: PosX
-          name: 'Mid X'
-        - id: PosY
-          name: 'Mid Y'
-        - id: Side
-          name: 'Layer'
-        - id: Rot
-          name: 'Rotation'
-
 

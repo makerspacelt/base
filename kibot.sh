@@ -23,30 +23,24 @@ if [ "$1" ]; then
 fi
 
 
-# regenerate qr code
-pcb_version="$(grep '\(rev "[^"]*\)"' project/project.kicad_pcb | cut -d'"' -f2)"
-echo "http://kms-psu-500.makerspace.lt/v${pcb_version}" \
-        | qrencode -o - -l H -m1 -d256 -s5 \
-        | convert media/kms-logo.png -threshold 90% -trim -resize 70x70 -gravity center -extent 75x75 - +swap -composite gen/qr_link.png
-
-# convert png to footprint as bitmap2component cannot be used from cli
-curl -sSL -X POST \
-	-F "module_name=qr" \
-	-F "threshold=127" \
-	-F "scale_factor=0.1" \
-	-F "thefile=@gen/qr_link.png" \
-	-F "submit=Upload" \
-	http://img2mod.wayneandlayne.com/img2mod_process.py \
-	> project/lib/footprint/qr.kicad_mod
-
 
 # generate documentation stuff
-run_kibot --out-dir ../gen/
+run_kibot --out-dir ../gen/ --board main.kicad_pcb     print_sch pcb_print pcb_img_2d_front pcb_img_2d_back pcb_img_3d_front pcb_img_3d_main
+run_kibot --out-dir ../gen/ --board storage.kicad_pcb  print_sch pcb_print pcb_img_2d_front pcb_img_2d_back pcb_img_3d_front pcb_img_3d_main
+
 
 # generate single board fab stuff
-mkdir -p gen/single
-run_kibot --skip-pre all --out-dir ../gen/single ibom fab_gerbers fab_drill fab_netlist fab_position
+run_kibot --skip-pre all --board main.kicad_pcb    --out-dir ../gen/main_single    ibom fab_gerbers fab_drill fab_netlist
+run_kibot --skip-pre all --board storage.kicad_pcb --out-dir ../gen/storage_single ibom fab_gerbers fab_drill fab_netlist
 
+
+
+
+# remove garbage changes from pdfs
+sed -i '/[/]CreationDate.*$/d' ./gen/main_items.pdf
+sed -i '/[/]CreationDate.*$/d' ./gen/main_floorplan.pdf
+sed -i '/[/]CreationDate.*$/d' ./gen/storage_items.pdf
+sed -i '/[/]CreationDate.*$/d' ./gen/storage_floorplan.pdf
 
 
 # make gerber generation reproducible for git
@@ -56,15 +50,8 @@ sed -i \
 	-e '/^.*DRILL file .* date .*$/d' \
 	./gen/*/*.{gbr,drl}
 
-# remove garbage changes from schematics.pdf
-sed -i '/[/]CreationDate.*$/d' ./gen/schematics.pdf
-sed -i '/[/]CreationDate.*$/d' ./gen/floorplan.pdf
-
 
 # move files around
-
-cp -f ./gen/bom.csv ./gen/single/_bom.csv
-
 
 # archive 
 
@@ -74,7 +61,8 @@ function archive() {
 	touch -cd 1970-01-01T00:00:00Z $dir/*
 	zip -qjorX9 -n zip $1 $dir
 }
-archive ./gen/single/_prod.zip
+archive ./gen/main_single/_prod_main.zip
+archive ./gen/storage_single/_prod_storage.zip
 
 
 
