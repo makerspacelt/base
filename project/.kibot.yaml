@@ -78,6 +78,16 @@ outputs:
             color: '#000000'
           - layer: User.Drawings
             color: '#444444'
+        - sheet: ''
+          title: 'Ventilation'
+          scaling: 1
+          layers: 
+          - layer: vent.Cu
+            color: '#888888'
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.Drawings
+            color: '#444444'
 
 
   - name: pcb_img_2d_front

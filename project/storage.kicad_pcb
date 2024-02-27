@@ -14,7 +14,7 @@
     (1 "In1.Cu" signal "freeway.Cu")
     (2 "In2.Cu" signal "air.Cu")
     (3 "In3.Cu" signal "walls.Cu")
-    (4 "In4.Cu" signal)
+    (4 "In4.Cu" signal "vent.Cu")
     (31 "B.Cu" signal)
     (32 "B.Adhes" user "B.Adhesive")
     (33 "F.Adhes" user "F.Adhesive")
