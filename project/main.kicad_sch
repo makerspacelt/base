@@ -3764,25 +3764,6 @@
     (pin "2" (uuid 6b7833d0-5225-4fe6-87fe-5a0f9f68379e))
   )
 
-  (symbol (lib_id "Device:R") (at 130.81 57.15 270) (unit 1)
-    (in_bom yes) (on_board yes)
-    (uuid e8945538-4119-43cb-a645-97184f94995d)
-    (property "Reference" "R52" (id 0) (at 130.81 48.26 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "Trash el" (id 1) (at 135.89 57.15 90)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Footprint" "-local:_o_trash_electronics__" (id 2) (at 134.62 54.61 90)
-      (effects (font (size 1.27 1.27)) (justify left top))
-    )
-    (property "Datasheet" "~" (id 3) (at 130.81 57.15 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 676b8408-f5ed-4607-97e5-88f3e48752a3))
-    (pin "2" (uuid e7bdb111-bcf8-4b9c-97fa-3ca3451e47b9))
-  )
-
   (symbol (lib_id "Device:R") (at 67.31 190.5 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ea6a9a78-3677-47ef-8330-ff3f9b15181f)
@@ -4621,9 +4602,6 @@
     )
     (path "/ac84047f-b4b0-49df-b0b3-c8cbfa92a854"
       (reference "R51") (unit 1) (value "Brooms") (footprint "-local:_o_brooms__")
-    )
-    (path "/e8945538-4119-43cb-a645-97184f94995d"
-      (reference "R52") (unit 1) (value "Trash el") (footprint "-local:_o_trash_electronics__")
     )
     (path "/67d7ca95-c2ce-4cf8-974e-f28e2ae17ec6"
       (reference "R53") (unit 1) (value "brackets t") (footprint "-local:_o_wheel_tower1_x7__")
