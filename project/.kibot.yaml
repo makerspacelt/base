@@ -46,6 +46,7 @@ outputs:
             color: '#000000'
           - layer: User.Drawings
             color: '#444444'
+
         - sheet: ''
           title: 'Walls'
           scaling: 1
@@ -56,18 +57,70 @@ outputs:
             color: '#000000'
           - layer: User.Drawings
             color: '#444444'
+
         - sheet: ''
-          title: 'Electrical'
+          title: 'Electrical channels mount points'
+          scaling: 1
+          layers: 
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.el-chan-mount
+            color: '#444444'
+
+        - sheet: ''
+          title: 'Electrical channels'
+          scaling: 1
+          layers: 
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.el-chan
+            color: '#444444'
+
+        - sheet: ''
+          title: 'Electrical switched'
           scaling: 1
           layers: 
           - layer: B.Cu
-            color: '#888888'
+            color: '#000000'
           - layer: B.Paste
-            color: '#444444'
+            color: '#000000'
           - layer: B.SilkS
             color: '#000000'
-          - layer: User.Drawings
+          - layer: User.el-chan
             color: '#444444'
+          - layer: User.el-norm-runs
+            color: '#888888'
+
+        - sheet: ''
+          title: 'Electrical permanent'
+          scaling: 1
+          layers: 
+          - layer: B.Cu
+            color: '#000000'
+          - layer: B.Paste
+            color: '#000000'
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.el-chan
+            color: '#444444'
+          - layer: User.el-perma-runs
+            color: '#888888'
+
+        - sheet: ''
+          title: 'Comunications'
+          scaling: 1
+          layers: 
+          - layer: B.Cu
+            color: '#000000'
+          - layer: B.Paste
+            color: '#000000'
+          - layer: B.SilkS
+            color: '#000000'
+          - layer: User.el-chan
+            color: '#444444'
+          - layer: User.com-runs
+            color: '#888888'
+ 
         - sheet: ''
           title: 'Pneumatic'
           scaling: 1
@@ -78,6 +131,7 @@ outputs:
             color: '#000000'
           - layer: User.Drawings
             color: '#444444'
+
         - sheet: ''
           title: 'Ventilation'
           scaling: 1
