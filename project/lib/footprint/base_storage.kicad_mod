@@ -1,7 +1,7 @@
 (footprint "base_storage" (version 20211014) (generator pcbnew)
   (layer "F.Cu")
   (tedit 0)
-  (attr smd)
+  (attr through_hole)
   (fp_text reference "REF**" (at 0 -2 unlocked) (layer "F.SilkS")
     (effects (font (size 1 1) (thickness 0.15)) (justify left))
     (tstamp 7c38d0d6-aa82-451b-ac53-0a7a3199c377)
@@ -584,4 +584,144 @@
   (pad "1" thru_hole roundrect (at 62 2) (size 4 4) (drill 3.2) (layers *.Mask "F.Cu" "In1.Cu" "B.Cu") (roundrect_rratio 0.05) (tstamp de6832f0-d58e-42c7-bb44-7e2b5fc8a899))
   (pad "1" thru_hole roundrect (at 182 92) (size 4 4) (drill 3.2) (layers *.Mask "F.Cu" "In1.Cu" "B.Cu") (roundrect_rratio 0.05) (tstamp ea47f3c2-f855-41da-aa25-2fb4a9747914))
   (pad "1" thru_hole roundrect (at 62 32) (size 4 4) (drill 3.2) (layers *.Mask "F.Cu" "In1.Cu" "B.Cu") (roundrect_rratio 0.05) (tstamp f2fb4d76-478a-4858-be1f-8b40b225817e))
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 2 -2 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 2 -32 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 2 -92 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 2 -122 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 62 -2 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 62 -32 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 62 -92 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 62 -122 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 122 -2 0))
+    (scale (xyz 4 4 23.5))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 122 -32 0))
+    (scale (xyz 4 4 23.5))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 152 -2 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 152 -32 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 182 -2 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 182 -32 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 152 -92 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 182 -92 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 182 -122 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 152 -122 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 122 -92 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 122 -122 0))
+    (scale (xyz 4 4 26.7))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 32 -2 26.5))
+    (scale (xyz 64 4 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 32 -122 26.5))
+    (scale (xyz 64 4 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 107 -2 23.5))
+    (scale (xyz 94 4 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 107 -32 23.5))
+    (scale (xyz 94 4 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 2 -62 26.5))
+    (scale (xyz 4 124 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 62 -62 26.5))
+    (scale (xyz 4 124 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 182 -62 20.5))
+    (scale (xyz 4 124 4))
+    (rotate (xyz 0 0 0))
+  )
+  (model "${KIPRJMOD}/lib/model/cube_1x1x1mm_white.step"
+    (offset (xyz 152 -62 20.5))
+    (scale (xyz 4 124 4))
+    (rotate (xyz 0 0 0))
+  )
 )
